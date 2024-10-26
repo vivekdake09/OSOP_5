@@ -1,0 +1,439 @@
+Name : Sarthak Pagar
+Roll No. : 34
+Classs : TE (IT)
+Practical : 1
+Statement : Write a program to implement an address book with options given below: a) Create address book. b) View address book. c) Insert a record. d) Delete a record. e) Modify a record. f) Exit
+
+echo -e "Address Book\n"
+
+echo -e "File name:"
+read fname
+
+touch $fname
+
+echo -e "id \t name \t mobile_no \t salary \t location \t" >> $fname
+
+ch=0
+while [ $ch -lt 7 ]
+do
+
+echo -e "1) Create Address Book\n"
+echo -e "2) View Address Book\n"
+echo -e "3) Insert a Record\n"
+echo -e "4) Delete a Record\n"
+echo -e "5) Modify a Record\n"
+echo -e "6) Search a Record\n"
+echo -e "7) Exit"
+
+
+
+
+echo "Enter Your Choice:"
+read ch
+
+case $ch in 
+
+	1)
+
+	echo "Enter number of records:"
+	read n
+	
+		
+	for((i=0;i<$n;i++))
+	do
+	
+	echo "Enter id:"
+	read id
+	
+	echo "Enter name:"
+	read name
+	
+	echo "Enter mobile number:"
+	read mno
+
+	echo "Enter salary:"
+	read sal
+	
+	echo "Enter location:"
+	read loc
+	
+	echo -e "$id \t $name \t $mno \t $sal \t $loc" >> $fname
+	
+	done
+	
+;;
+
+	2)
+
+	cat  $fname
+	
+;;
+
+	3) 
+	
+	echo "Enter id:"
+	read id
+	
+	echo "Enter name:"
+	read name
+	
+	echo "Enter mobile number:"
+	read mno
+
+	echo "Enter salary:"
+	read sal
+	
+	echo "Enter location:"
+	read loc
+	
+	echo -e "$id \t $name \t $mno \t $sal \t $loc " >> $fname	
+
+;;
+	4)
+	
+	echo "Enter Employee ID to delete:"
+	read id
+
+	if grep -w $id $fname
+	then
+		grep -wv $id $fname >>temp
+		rm $fname
+		mv temp $fname	
+	else
+		echo "record not found"
+	fi
+		
+	
+;;
+	5)
+	echo "Enter Employee ID to modify:"
+	read id
+
+	if grep -w $id $fname
+	then
+		grep -wv $id $fname >>temp
+		rm $fname
+		mv temp $fname	
+
+		echo "Enter e_id:"
+		read id
+	
+		echo "Enter name:"
+		read name
+	
+		echo "Enter mobile number:"
+		read mno
+
+		echo "Enter salary:"
+		read sal
+	
+		echo "Enter location:"
+		read loc
+	
+		echo -e "$id \t $name \t $mno \t $sal \t $loc " >> $fname	
+		else
+			echo "record not found"
+		fi
+;;
+	
+	6)
+		echo "Enter Employee id to search:"
+		read id
+		if grep -w $id $fname
+		then
+			echo "Record found"
+		else
+			echo "record not found"
+		fi
+;;
+
+	*)
+		
+
+esac
+
+done
+
+
+Output :-
+
+[Saru1594@localhost 1]$ sh Employee.sh
+Address Book
+
+File name:
+Employee
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+1
+Enter number of records:
+5
+Enter id:
+101
+Enter name:
+Sarthak
+Enter mobile number:
+7666264200
+Enter salary:
+100000
+Enter location:
+Warje
+Enter id:
+102
+Enter name:
+Ashutosh
+Enter mobile number:
+9928073301
+Enter salary:
+60000
+Enter location:
+Shivner
+Enter id:
+103
+Enter name:
+Geetesh
+Enter mobile number:
+8627120019
+Enter salary:
+70000
+Enter location:
+Pashan
+Enter id:
+104
+Enter name:
+Aradhya
+Enter mobile number:
+9380674819
+Enter salary:
+30000
+Enter location:
+Hadapsar
+Enter id:
+105
+Enter name:
+Prasad
+Enter mobile number:
+8263445291
+Enter salary:
+80000
+Enter location:
+Karve
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+2
+id 	 name 	 mobile_no 	 salary 	 location 	
+101 	 Sarthak 	 7666264200 	 100000 	 Warje
+102 	 Ashutosh 	 9928073301 	 60000 	 Shivner
+103 	 Geetesh 	 8627120019 	 70000 	 Pashan
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+105 	 Prasad 	 8263445291 	 80000 	 Karve
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+3
+Enter id:
+106
+Enter name:
+Raju
+Enter mobile number:
+3241090807
+Enter salary:
+10000
+Enter location:
+Nanded
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+2
+id 	 name 	 mobile_no 	 salary 	 location 	
+101 	 Sarthak 	 7666264200 	 100000 	 Warje
+102 	 Ashutosh 	 9928073301 	 60000 	 Shivner
+103 	 Geetesh 	 8627120019 	 70000 	 Pashan
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+105 	 Prasad 	 8263445291 	 80000 	 Karve
+106 	 Raju 	 3241090807 	 10000 	 Nanded 
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+4
+Enter Employee ID to delete:
+106
+106 	 Raju 	 3241090807 	 10000 	 Nanded 
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+2
+id 	 name 	 mobile_no 	 salary 	 location 	
+101 	 Sarthak 	 7666264200 	 100000 	 Warje
+102 	 Ashutosh 	 9928073301 	 60000 	 Shivner
+103 	 Geetesh 	 8627120019 	 70000 	 Pashan
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+105 	 Prasad 	 8263445291 	 80000 	 Karve
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+5
+Enter Employee ID to modify:
+105
+105 	 Prasad 	 8263445291 	 80000 	 Karve
+Enter e_id:
+105
+Enter name:
+Pravin
+Enter mobile number:
+8263445291
+Enter salary:
+20000
+Enter location:
+Karve
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+2
+id 	 name 	 mobile_no 	 salary 	 location 	
+101 	 Sarthak 	 7666264200 	 100000 	 Warje
+102 	 Ashutosh 	 9928073301 	 60000 	 Shivner
+103 	 Geetesh 	 8627120019 	 70000 	 Pashan
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+105 	 Pravin 	 8263445291 	 20000 	 Karve 
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+6
+Enter Employee id to search:
+104
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+Record found
+1) Create Address Book
+
+2) View Address Book
+
+3) Insert a Record
+
+4) Delete a Record
+
+5) Modify a Record
+
+6) Search a Record
+
+7) Exit
+Enter Your Choice:
+7
+
+
+
+
+Output in Employee File :-
+
+id 	 name 	             mobile_no 	 salary 	             location 	
+101 	 Sarthak 	 7666264200 	 100000 	 Warje
+102 	 Ashutosh 	 9928073301 	 60000 	 Shivner
+103 	 Geetesh 	 8627120019 	 70000 	 Pashan
+104 	 Aradhya 	 9380674819 	 30000 	 Hadapsar
+105 	 Pravin 	 8263445291 	 20000 	 Karve 
+
+
+
+
+
+
