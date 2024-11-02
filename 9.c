@@ -1,9 +1,3 @@
-Name : Sarthak Pagar
-Roll No. : 34
-Classs : TE (IT)
-Practical : 7A
-Statement : A. FIFOS: Full duplex communication between two independent processes. First process accepts sentences and writes on one pipe to be read by second process and second process counts number of characters, number of words and number of lines in accepted sentences, writes this output in a text file and writes the contents of the file on second pipe to be read by first process and displays onstandard output. 
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -141,26 +135,3 @@ int main() {
     return 0;
 }
 
-
-
-
-
-
-
-
-
-
-Output :-
-
-[Saru1594@localhost 7a]$ gcc exp7a.c 
-[Saru1594@localhost 7a]$ ./a.out
-Enter multiple lines of text (end input with a blank line):
-hi
-my name is sarthak
-this is my 7th practical
-
-
-Results received from child process:
-Characters: 44
-Words: 10
-Lines: 3

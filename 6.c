@@ -1,9 +1,3 @@
-Name : Sarthak Pagar
-Roll No. : 34
-Class : TE (IT)
-Practical : 4B
-Statement : Thread synchronization and mutual exclusion using mutex. Application to demonstrate: ReaderWriter problem with reader priority. 
-
 #include<stdio.h>
 #include<unistd.h>
 #include<semaphore.h>
@@ -90,48 +84,3 @@ void* reader(void *argp) {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-Output :-
-
-sarthak1594@UbuntuInWin:~/OS Practical/4$ gcc reader-writer.c 
-sarthak1594@UbuntuInWin:~/OS Practical/4$ ./a.out
-Enter the no to add in writer buffer : 1
-Element read by reader=1
-Element read by reader=1
-Enter the no to add in writer buffer : 2
-Element read by reader=2
-Element read by reader=2
-Enter the no to add in writer buffer : 3
-Element read by reader=3
-Element read by reader=3
-Enter the no to add in writer buffer : 4
-Element read by reader=4
-Element read by reader=4
-Enter the no to add in writer buffer : 5
-Element read by reader=5
-Element read by reader=5
-Enter the no to add in writer buffer : 6
-Element read by reader=6
-Element read by reader=6
-Enter the no to add in writer buffer : 7
-Element read by reader=7
-Element read by reader=7
-Enter the no to add in writer buffer : 8
-Element read by reader=8
-Element read by reader=8
-Enter the no to add in writer buffer : 9
-Element read by reader=9
-Element read by reader=9
-Enter the no to add in writer buffer : 0
-Element read by reader=0
-Element read by reader=0

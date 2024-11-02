@@ -1,8 +1,3 @@
-Name : Sarthak Pagar
-Roll No. : 34
-Classs : TE (IT)
-Practical : 2A
-Statement : Implement the C program in which main program accepts the integers to be sorted. Main program uses the FORK system call to create a new process called a child process. Parent process sorts the integers using sorting algorithm and waits for child process using WAIT system call to sort the integers using any sorting algorithm. Also demonstrate zombie and orphan states. 
 
 #include<stdio.h>
 #include<unistd.h>
@@ -99,36 +94,4 @@ int main()
       
    return 0;
 }
-
-
-
-
-Output :-
-
-[Saru1594@localhost 2]$ gcc 2A.c
-[Saru1594@localhost 2]$ ./a.out
-
-HOW MANY NOS DO YOU WANT IN ARRAY : 5
-ENTER ARRAY ELEMENT : 8
-3
-5
-2
-7
-
-			**********ZOMBIE STATE**************
-
-		**********ORPHAN STATE**************
-F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
-
-	 CHILD PROCESS PID : 12314 
-	 PARENT PROCESS PPID : 12307
-
-ARRAY IN ASSCENDING ORDER : 	2	3	5	7	8
-
-
-	TERMINATED CHILD PID : 12314
-	PARENT PID (MAIN) : 12307
-	PARENTS PARENT PPID (BASH) : 12248 
-
-ARRAY IN DESCENDING ORDER : 	8	7	5	3	2
 
