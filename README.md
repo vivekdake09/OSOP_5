@@ -18,7 +18,7 @@ sorts the integers using sorting algorithm and waits for child process using WAI
 the integers using any sorting algorithm. Also demonstrate zombie and orphan states.
 
 ### How to Run
-gcc 2.c
+gcc 2.c  
 ./a.out
 
 ## Practical 3a_parent 3b_parent - C Program
@@ -30,8 +30,8 @@ The child process uses EXECVE system call to load new program which display arra
 order.
 
 ### How to Run
-gcc -o parent 3a_parent.c
-gcc -o child 3b_child.c
+gcc -o parent 3a_parent.c  
+gcc -o child 3b_child.c  
 ./parent 2 4 6 3 8 1 0 (Any random digits)
 
 ## Practical 4 - C Program
@@ -41,7 +41,7 @@ and Round Robin with different arrival time.
 Note: Assume any one CPU scheduling algorithm
 
 ### How to Run
-gcc 4.c
+gcc 4.c  
 ./a.out
 
 ## Practical 5 - C Program
@@ -50,7 +50,7 @@ Name: Thread synchronization using counting semaphores. Application to demonstra
 consumer problem with counting semaphores and mutex.
 
 ### How to Run
-gcc 5.c
+gcc 5.c  
 ./a.out
 
 ## Practical 6 - C Program
@@ -59,7 +59,7 @@ Name: Thread synchronization and mutual exclusion using mutex. Application to de
 Reader- Writer problem with reader priority.
 
 ### How to Run
-gcc 6.c
+gcc 6.c  
 ./a.out
 
 ## Practical 7 - C Program
@@ -67,7 +67,7 @@ gcc 6.c
 Name: Implement the C program for Deadlock Avoidance Algorithm: Bankers Algorithm.
 
 ### How to Run
-gcc 7.c
+gcc 7.c  
 ./a.out
 
 ## Practical 8 - C Program
@@ -77,7 +77,7 @@ frame size as minimum three.
 Note: Assume any one Page Replacement Algorithm.
 
 ### How to Run
-gcc 8.c
+gcc 8.c  
 ./a.out
 
 ## Practical 9 - C Program
@@ -89,7 +89,7 @@ and writes the contents of the file on second pipe to be read by first process a
 output.
 
 ### How to Run
-gcc 9.c
+gcc 9.c  
 ./a.out
 
 ## Practical 10 a b - C Program
@@ -101,9 +101,9 @@ shared memory segment and displays it to the screen.
 
 ### How to Run
 First create file named shmfile
-gcc -o 10a 10a.c
-./10a
-gcc -o 10b 10b.c
+gcc -o 10a 10a.c  
+./10a  
+gcc -o 10b 10b.c  
 ./10b
 
 ## Practical 11 - C Program
@@ -113,7 +113,7 @@ the initial head position moving away from the spindle.
 Note: Assume any one Disk Scheduling Algorithm.
 
 ### How to Run
-gcc 11.c
+gcc 11.c  
 ./a.out
 
 ## FAQ
