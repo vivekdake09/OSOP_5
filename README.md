@@ -100,7 +100,7 @@ and writes the message to the shared memory segment. Client process reads the me
 shared memory segment and displays it to the screen.
 
 ### How to Run
-First create file named shmfile
+First create file named shmfile  
 gcc -o 10a 10a.c  
 ./10a  
 gcc -o 10b 10b.c  
