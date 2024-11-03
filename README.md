@@ -1,6 +1,6 @@
 # Operating Systems Practicals Guide
 
-This README provides instructions on running OS practicals on Ubuntu. The practicals are organized as per the OSL chits PDF.
+This README provides instructions on running OS practicals on Ubuntu. The practicals are organized as per the OSL chits PDF.For the FAQ or most likely questions please click on desired chit number.
 
 ## Practical 1b - Shell Script
 ### Problem Statement
@@ -116,6 +116,6 @@ Note: Assume any one Disk Scheduling Algorithm.
 gcc 11.c  
 ./a.out
 
-## FAQ
+
 
 
