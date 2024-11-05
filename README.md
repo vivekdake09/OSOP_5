@@ -32,7 +32,7 @@ order.
 ### How to Run
 gcc -o parent 3a_parent.c  
 gcc -o child 3b_child.c  
-./parent 2 4 6 3 8 1 0 (Any random digits)
+./parent child 2 4 6 3 8 1 0 (Any random digits)
 
 ## Practical 4 - C Program
 ### Description
