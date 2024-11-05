@@ -78,15 +78,15 @@ int main()
         
         
         printf("\n\t\t\t**********ZOMBIE STATE**************\n");
-        system("ps -el | grep Z");
+    	printf("\n\nARRAY IN DESCENDING ORDER : ");
+        bubble_dsc(arr,n);
+        print(arr,n);
+         system("ps -el | grep Z");
         f=wait(0);
        
         printf("\n\tTERMINATED CHILD PID : %d",f);
         printf("\n\tPARENT PID (MAIN) : %d",getpid());
         printf("\n\tPARENTS PARENT PPID (BASH) : %d ",getppid());
-    	printf("\n\nARRAY IN DESCENDING ORDER : ");
-        bubble_dsc(arr,n);
-        print(arr,n);
         
    }
    else

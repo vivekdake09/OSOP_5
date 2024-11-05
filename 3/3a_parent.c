@@ -37,7 +37,6 @@ int main(int argc, char *argv[]) {
         a[i - 1] = atoi(argv[i]); // Store the integers in array
     }
 
-    bubble_asc(a, n); // Sort in ascending order
 
     // Prepare arguments for child process
     char *args[n + 2]; // +2 for program name and NULL termination
@@ -56,6 +55,7 @@ int main(int argc, char *argv[]) {
     } else if (pid > 0) { // Parent process
         wait(NULL); // Wait for child process to finish
         printf("\nI am Parent Process, my pid is %d \n", getpid());
+        bubble_asc(a, n); // Sort in ascending order
     } else {
         perror("Fork failed");
         return 1;
