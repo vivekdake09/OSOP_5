@@ -201,3 +201,4 @@ int CLOOK(){
     printf("Total head movement is %d", TotalHeadMoment);
     return 0;
 }
+////82 170 43 140 24 16 190
