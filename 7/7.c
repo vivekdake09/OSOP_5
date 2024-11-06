@@ -136,3 +136,41 @@ int safetyalgorithm(int available[m],int safesequence[n])
 	    return 1;
     return 0;
 }
+
+vivek@vivek-VirtualBox:~/Downloads/Vivek OS$ gcc 5_Banker.c
+vivek@vivek-VirtualBox:~/Downloads/Vivek OS$ ./a.out
+
+Enter No of processes: 5 
+Enter no of resources: 3
+
+****Enter details of process****
+Enter the details of process P0: 
+	Enter the allocated resources: 0 1 0
+	Enter the max resources: 7 5 3
+
+Enter the details of process P1: 
+	Enter the allocated resources: 2 0 0 
+	Enter the max resources: 3 2 2
+
+Enter the details of process P2: 
+	Enter the allocated resources: 3 0 2
+	Enter the max resources: 9 0 2
+
+Enter the details of process P3: 
+	Enter the allocated resources: 2 1 1
+	Enter the max resources: 2 2 2 
+
+Enter the details of process P4: 
+	Enter the allocated resources: 0 0 02
+	Enter the max resources: 4 3 3 
+
+Enter the available resources: 3 3 2
+
+	PID	ALLOCATE	MAX		NEED
+	P0	0 1 0 		7 5 3 		7 4 3 
+	P1	2 0 0 		3 2 2 		1 2 2 
+	P2	3 0 2 		9 0 2 		6 0 0 
+	P3	2 1 1 		2 2 2 		0 1 1 
+	P4	0 0 2 		4 3 3 		4 3 1 
+
+	SYSTEM IS IN SAFE STATE...
